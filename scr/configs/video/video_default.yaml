@@ -1,0 +1,13 @@
+# configs/video/video_default.yaml
+
+video_loader:
+
+  # Frame grabbing logic
+  start_frame: 0            # Start from this frame
+  max_frames: null          # Process entire video if null
+  skip_frames: 0            # Skip N frames after each grabbed frame
+
+  batch_size: 1             # Number of frames per batch
+  batch_skip: 0             # Skip N batches after processing one batch
+
+  queue_size: 32            # Prefetch queue size (bigger = smoother)

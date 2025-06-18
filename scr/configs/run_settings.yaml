@@ -1,0 +1,9 @@
+# scr/configs/run_settings.yaml
+mode: image
+input: test_inputs/sample.jpg
+output: test_output/
+config: config_default.yaml
+# Optional overrides
+skip_frames: 1
+batch_size: 1
+max_frames: 10

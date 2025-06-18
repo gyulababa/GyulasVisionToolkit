@@ -1,0 +1,15 @@
+presets:
+  default:
+    iou_threshold: 0.3
+    overlap_threshold: 0.7
+    size_ratio_threshold: 2.0
+
+  loose:
+    iou_threshold: 0.2
+    overlap_threshold: 0.5
+    size_ratio_threshold: 3.0
+
+  strict:
+    iou_threshold: 0.4
+    overlap_threshold: 0.8
+    size_ratio_threshold: 1.5

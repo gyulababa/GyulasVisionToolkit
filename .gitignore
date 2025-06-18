@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.env
+.venv/
+env/
+venv/
+pip-log.txt
+
+# Models
+scr/models/
+
+# Data & logs
+*.log
+*.tmp
+*.bak
+*.cache/
+*.pth
+*.ckpt
+*.onnx
+
+# VS Code / PyCharm
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Label Studio
+output/

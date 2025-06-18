@@ -1,0 +1,20 @@
+yolo_models:
+  default: yolov8n.pt
+  nano: yolov8n.pt
+  large: yolov8l.pt
+  custom_v11: yolo11n.pt
+  custom_v11_seg: yolo11n-seg.pt
+  custom_world: yolov8x-world.pt
+
+deepface_backends:
+  default: opencv
+  fast: retinaface
+  accurate: ssd
+
+deepface_weights:
+  facial_expression: deepfaceWeights/facial_expression_model_weights.h5
+  age: deepfaceWeights/age_model_weights.h5
+  gender: deepfaceWeights/gender_model_weights.h5
+  race: deepfaceWeights/race_model_single_batch.h5
+  retinaface: deepfaceWeights/retinaface.h5
+  vggface: deepfaceWeights/vgg_face_weights.h5

@@ -1,0 +1,39 @@
+pipeline:
+  preview: true
+  save_faces: true
+  output_root: test_output
+  draw_person_box: true
+  full_analysis: true
+
+analyzer:
+  enable_validation: true
+  verification_threshold: 0.15
+
+post_crop_filter:
+  min_face_size: 60
+  max_face_size: 512
+  min_aspect_ratio: 0.8
+  max_aspect_ratio: 1.25
+
+detector_filter:
+  detector_face_min_size: 100
+  detector_face_max_size: 2500
+  detector_face_min_aspect_ratio: 0.2
+  detector_face_max_aspect_ratio: 1.25
+
+deduplication:
+  face_preset: default
+  person_preset: loose
+
+  # allow manual overrides:
+  face_iou_threshold: null
+  face_overlap_threshold: null
+  face_size_ratio_threshold: null
+
+  person_iou_threshold: null
+  person_overlap_threshold: null
+  person_size_ratio_threshold: null
+
+model_selection:
+  person_detector_model: default
+  face_detector_backend: default
