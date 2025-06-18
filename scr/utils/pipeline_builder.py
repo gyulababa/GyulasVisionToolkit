@@ -1,11 +1,11 @@
 # scr/utils/pipeline_builder.py
 
 import os
-from coreclasses.config_loader import ConfigLoader
-from coreclasses.managers.modelmanager import ModelManager
-from coreclasses.detectors.facedetector import FaceDetector
-from coreclasses.detectors.pose_emotion import PoseAndEmotionAnalyzer
-from coreclasses.detectors.objectdetector import ObjectDetector
+from scr.coreclasses.config_loader import ConfigLoader
+from scr.coreclasses.managers.modelmanager import ModelManager
+from scr.coreclasses.detectors.facedetector import FaceDetector
+from scr.coreclasses.detectors.pose_emotion import PoseAndEmotionAnalyzer
+from scr.coreclasses.detectors.objectdetector import ObjectDetector
 
 def build_pipeline(config_filename="config_default.yaml", configs_root="configs/"):
     # Load config

@@ -1,8 +1,8 @@
 import argparse
 import cv2
 import os
-from utils.pipeline_builder import build_pipeline
-from coreclasses.video.video_frame_grabber import VideoFrameGrabber
+from scr.utils.pipeline_builder import build_pipeline
+from scr.coreclasses.video.video_frame_grabber import VideoFrameGrabber
 
 def run_image_mode(pipeline, input_path, output_path):
     img = cv2.imread(input_path)
