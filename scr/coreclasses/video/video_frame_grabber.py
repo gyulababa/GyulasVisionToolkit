@@ -1,10 +1,8 @@
 # scr/coreclasses/video_frame_grabber.py
 
 import cv2
-import os
 import threading
 import queue
-import time
 
 class VideoFrameGrabber:
     def __init__(self, 
