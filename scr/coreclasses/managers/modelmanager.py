@@ -62,10 +62,9 @@ class ModelManager:
         print(f"\r⏬ Downloading: {percent}%", end='')
 
     def _find_project_root(self):
-        """
-        Detects project root automatically based on file location.
-        """
+        """Return the repository root by ascending three directories from this file."""
         this_file = os.path.abspath(__file__)
-        core_dir = os.path.dirname(this_file)
-        project_root = os.path.abspath(os.path.join(core_dir, ".."))
+        project_root = os.path.abspath(
+            os.path.join(os.path.dirname(this_file), "..", "..", "..")
+        )
         return project_root
