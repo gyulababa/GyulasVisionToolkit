@@ -4,7 +4,7 @@
 # Face Detector (DeepFace + hybrid dedup)
 # ========================================
 from deepface import DeepFace
-from coreclasses.filtering.boxdeduplicator import BoxDeduplicator
+from scr.coreclasses.filtering.boxdeduplicator import BoxDeduplicator
 
 class FaceDetector:
     def __init__(self, backend="opencv", min_face_size=40, max_face_size=1024,

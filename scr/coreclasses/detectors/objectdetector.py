@@ -6,8 +6,8 @@ import os
 import numpy as np
 import cv2
 from ultralytics import YOLO
-from coreclasses.managers.modelmanager import ModelManager
-from coreclasses.filtering.boxdeduplicator import BoxDeduplicator
+from scr.coreclasses.managers.modelmanager import ModelManager
+from scr.coreclasses.filtering.boxdeduplicator import BoxDeduplicator
 
 class ObjectDetector:
     def __init__(self, model_path="yolov8n.pt", device="cpu", confidence=0.3,
