@@ -1,6 +1,7 @@
 import argparse
 import cv2
 import os
+import yaml
 from scr.utils.pipeline_builder import build_pipeline
 from scr.coreclasses.video.video_frame_grabber import VideoFrameGrabber
 
