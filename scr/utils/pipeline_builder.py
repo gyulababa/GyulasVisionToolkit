@@ -1,13 +1,17 @@
 # scr/utils/pipeline_builder.py
 
 import os
+from pathlib import Path
 from coreclasses.config_loader import ConfigLoader
 from coreclasses.managers.modelmanager import ModelManager
 from coreclasses.detectors.facedetector import FaceDetector
 from coreclasses.detectors.pose_emotion import PoseAndEmotionAnalyzer
 from coreclasses.detectors.objectdetector import ObjectDetector
 
-def build_pipeline(config_filename="config_default.yaml", configs_root="configs/"):
+# Absolute path to the configs directory inside the scr package
+DEFAULT_CONFIGS_ROOT = Path(__file__).resolve().parent.parent / "configs"
+
+def build_pipeline(config_filename="config_default.yaml", configs_root=DEFAULT_CONFIGS_ROOT):
     # Load config
     cfg_loader = ConfigLoader(config_filename, base_path=configs_root)
     cfg = cfg_loader.get()
