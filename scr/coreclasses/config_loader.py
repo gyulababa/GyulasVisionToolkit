@@ -1,17 +1,20 @@
 # coreclasses/config_loader.py
 
 import yaml
-import os
+from pathlib import Path
 
 class ConfigLoader:
 
-    def __init__(self, main_config_path, base_path="configs/"):
-        self.base_path = base_path
+    # Absolute path to the configs directory inside the scr package
+    DEFAULT_BASE_PATH = Path(__file__).resolve().parent.parent / "configs"
+
+    def __init__(self, main_config_path, base_path=DEFAULT_BASE_PATH):
+        self.base_path = Path(base_path)
         self.main_config_path = main_config_path
 
-        self.main_cfg = self._load_yaml(os.path.join(base_path, "main", main_config_path))
-        self.dedup_cfg = self._load_yaml(os.path.join(base_path, "dedup", "dedup_presets.yaml"))
-        self.model_cfg = self._load_yaml(os.path.join(base_path, "model", "model_paths.yaml"))
+        self.main_cfg = self._load_yaml(self.base_path / "main" / main_config_path)
+        self.dedup_cfg = self._load_yaml(self.base_path / "dedup" / "dedup_presets.yaml")
+        self.model_cfg = self._load_yaml(self.base_path / "model" / "model_paths.yaml")
 
         self.config = self._merge_configs()
 
